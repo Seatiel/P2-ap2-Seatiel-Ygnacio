@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Empleados.cs" />
+    <Compile Include="EmpleadosRetenciones.cs" />
+    <Compile Include="EmpleadosEmails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retenciones.cs" />
     <Compile Include="TiposEmail.cs" />

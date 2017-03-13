@@ -76,6 +76,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Registros\rEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rEmpleados.Designer.cs">
+      <DependentUpon>rEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rRetenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rRetenciones.Designer.cs">
+      <DependentUpon>rRetenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rTiposEmails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rTiposEmails.Designer.cs">
+      <DependentUpon>rTiposEmails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +107,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Registros\rEmpleados.resx">
+      <DependentUpon>rEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rRetenciones.resx">
+      <DependentUpon>rRetenciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rTiposEmails.resx">
+      <DependentUpon>rTiposEmails.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -102,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

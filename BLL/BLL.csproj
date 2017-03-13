@@ -48,7 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpleadosBLL.cs" />
+    <Compile Include="EmpleadosRetencionesBLL.cs" />
+    <Compile Include="EmpleadosEmailsBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetencionesBLL.cs" />
+    <Compile Include="TiposEmailBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
