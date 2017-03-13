@@ -1,6 +1,6 @@
 ﻿namespace P2_ap2_Seatiel_Ygnacio
 {
-    partial class Form1
+    partial class FormularioPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormularioPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Name = "FormularioPrincipal";
+            this.Text = "Formulario Principal";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

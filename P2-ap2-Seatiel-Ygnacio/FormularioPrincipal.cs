@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace P2_ap2_Seatiel_Ygnacio
 {
-    public partial class Form1 : Form
+    public partial class FormularioPrincipal : Form
     {
-        public Form1()
+        public FormularioPrincipal()
         {
             InitializeComponent();
         }

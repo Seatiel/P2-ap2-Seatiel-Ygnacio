@@ -15,7 +15,7 @@ namespace P2_ap2_Seatiel_Ygnacio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormularioPrincipal());
         }
     }
 }
