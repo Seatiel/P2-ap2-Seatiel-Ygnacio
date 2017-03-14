@@ -73,7 +73,6 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
             Empleados empleado = BLL.EmpleadosBLL.Buscar(em => em.EmpleadoId == id);
             if (!string.IsNullOrEmpty(EmpleadoIdtextBox.Text))
             {
-
                 if (BLL.EmpleadosBLL.Eliminar(empleado))
                 {
                     MessageBox.Show("Empleado Eliminado!");

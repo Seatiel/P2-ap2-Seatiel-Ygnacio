@@ -71,15 +71,14 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
             Retenciones retencion = BLL.RetencionesBLL.Buscar(re => re.RetencionId == id);
             if (!string.IsNullOrEmpty(RetencionesIdtextBox.Text))
             {
-
                 if (BLL.RetencionesBLL.Eliminar(retencion))
                 {
-                    MessageBox.Show("Empleado Eliminado!");
+                    MessageBox.Show("Retencion Eliminado!");
                     Limpiar();
                 }
                 else
                 {
-                    MessageBox.Show("Empleado no existe!");
+                    MessageBox.Show("La Retencion no existe!");
                 }
             }
         }
@@ -97,9 +96,10 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
                 }
                 else
                 {
-                    MessageBox.Show("El Empleado no ha sido creado");
+                    MessageBox.Show("La Retencion no ha sido creado");
                 }
             }
         }
+
     }
 }

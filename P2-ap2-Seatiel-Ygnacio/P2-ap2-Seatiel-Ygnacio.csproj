@@ -82,6 +82,12 @@
     <Compile Include="UI\Registros\rEmpleados.Designer.cs">
       <DependentUpon>rEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rEmpleadosEmails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rEmpleadosEmails.Designer.cs">
+      <DependentUpon>rEmpleadosEmails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rRetenciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Registros\rEmpleados.resx">
       <DependentUpon>rEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rEmpleadosEmails.resx">
+      <DependentUpon>rEmpleadosEmails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rRetenciones.resx">
       <DependentUpon>rRetenciones.cs</DependentUpon>

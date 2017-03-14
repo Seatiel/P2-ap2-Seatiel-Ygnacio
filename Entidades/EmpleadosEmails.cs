@@ -14,5 +14,22 @@ namespace Entidades
         public int TipoId { get; set; }
         public string Email { get; set; }
 
+        public virtual Empleados Empleado { get; set; }
+
+        public virtual TiposEmail TipoEmail { get; set; } //Uno
+
+        public EmpleadosEmails()
+        {
+            TipoEmail = new TiposEmail();
+        }
+
+        public EmpleadosEmails(int tipoId, string email)
+        {
+            this.TipoId = tipoId;
+            this.Email = email;
+        }
+
+
+
     }
 }

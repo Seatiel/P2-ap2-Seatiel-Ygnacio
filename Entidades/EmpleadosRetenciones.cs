@@ -9,10 +9,13 @@ namespace Entidades
     public class EmpleadosRetenciones
     {
         [Key]
-        public int EmpleadoDescuentoId { get; set; }
+        public int EmpleadoRetencionId { get; set; }
         public int EmpleadoId { get; set; }
         public int RetencionId { get; set; }
 
+        
 
+
+        
     }
 }

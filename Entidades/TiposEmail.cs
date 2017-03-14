@@ -12,5 +12,11 @@ namespace Entidades
         public int TipoId { get; set; }
         public string Descripcion { get; set; }
 
+        public virtual ICollection<EmpleadosEmails> Detalle { get; set; } //Muchos
+
+        public TiposEmail()
+        {
+            this.Detalle = new HashSet<EmpleadosEmails>();
+        }
     }
 }
