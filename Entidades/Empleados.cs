@@ -13,19 +13,20 @@ namespace Entidades
         public string Nombres { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public double Sueldo { get; set; }
+        public int RetencionId { get; set; }
 
-        public virtual ICollection<Retenciones> Retencion { get; set; }
+        public List<Retenciones> Retencion { get; set; }
 
         public virtual ICollection<EmpleadosEmails> Detalle { get; set; }
         
         public Empleados()
         {
-            this.Retencion = new HashSet<Retenciones>();
+            this.Retencion = new List<Retenciones>();
 
             this.Detalle = new HashSet<EmpleadosEmails>();
         }
 
-        public void AgregarDetalle(TiposEmail tipoEmail, string descripcion)
+        public void AgregarDetalle(TiposEmails tipoEmail, string descripcion)
         {
             this.Detalle.Add(new EmpleadosEmails(tipoEmail.TipoId, descripcion));
         }

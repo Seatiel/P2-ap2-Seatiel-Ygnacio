@@ -37,8 +37,8 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
             bool retorno = true;
             if ((string.IsNullOrEmpty(DescripciontextBox.Text)) || (string.IsNullOrEmpty(ValortextBox.Text)))
             {
-                DescripcionerrorProvider.SetError(DescripciontextBox, "Debe de ingresar la Descripcion.");
-                ValorerrorProvider.SetError(ValortextBox, "Debe de ingresar el Valor.");
+                ValidarerrorProvider.SetError(DescripciontextBox, "Debe de ingresar la Descripcion.");
+                ValidarerrorProvider.SetError(ValortextBox, "Debe de ingresar el Valor.");
                 retorno = false;
             }
             return retorno;

@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +10,23 @@ namespace BLL
 {
     public class EmpleadosEmailsBLL
     {
-        public static Entidades.EmpleadosEmails Guardar(Entidades.EmpleadosEmails nuevo)
+        public static bool Guardar(Entidades.EmpleadosEmails email)
         {
-            Entidades.EmpleadosEmails creado = null;
-            using (var repositorio = new Repositorio<Entidades.EmpleadosEmails>())
+            using (var db = new Repositorio<Entidades.EmpleadosEmails>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    return db.Guardar(email);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
 
-            return creado;
-
+            return false;
         }
-
 
         public static bool Mofidicar(Entidades.EmpleadosEmails existente)
         {
@@ -72,6 +78,24 @@ namespace BLL
                 }
                 return Result;
             }
+        }
+
+        public static List<Entidades.EmpleadosRetenciones> ListarTodo()
+        {
+            List<Entidades.EmpleadosRetenciones> listar = null;
+
+            using (var db = new Repositorio<Entidades.EmpleadosRetenciones>())
+            {
+                try
+                {
+                    listar = db.ListarTodo();
+                }
+                catch
+                {
+
+                }
+            }
+            return listar;
         }
     }
 }

@@ -9,18 +9,28 @@ namespace BLL
 {
     public class EmpleadosBLL
     {
-        public static Entidades.Empleados Guardar(Entidades.Empleados nuevo)
+        public static bool Guardar(Entidades.Empleados empleado)
         {
-            Entidades.Empleados creado = null;
-            using (var repositorio = new Repositorio<Entidades.Empleados>())
+            using (var db = new Parcial2Ap2Db())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    db.Empleado.Add(empleado);
+                    foreach (var er in empleado.Retencion)
+                    {
+                        db.Entry(er).State = System.Data.Entity.EntityState.Unchanged;
+                    }
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return false;
             }
-
-            return creado;
-
         }
-
 
         public static bool Mofidicar(Entidades.Empleados existente)
         {
@@ -52,6 +62,11 @@ namespace BLL
             using (var repoitorio = new Repositorio<Entidades.Empleados>())
             {
                 Result = repoitorio.Buscar(tipo);
+                if (Result != null)
+                {
+                    Result.Retencion.Count();
+                    Result.Detalle.Count();
+                }
             }
 
             return Result;
@@ -64,7 +79,7 @@ namespace BLL
             {
                 try
                 {
-                    Result = db.Lista(busqueda).ToList(); //EntitySet.Where(busqueda).ToList();
+                    Result = db.Lista(busqueda); //EntitySet.Where(busqueda).ToList();
                 }
                 catch
                 {
@@ -72,6 +87,24 @@ namespace BLL
                 }
                 return Result;
             }
+        }
+
+        public static List<Entidades.Empleados> ListarTodo()
+        {
+            List<Entidades.Empleados> listar = null;
+
+            using (var db = new Repositorio<Entidades.Empleados>())
+            {
+                try
+                {
+                    listar = db.ListarTodo();
+                }
+                catch
+                {
+
+                }
+            }
+            return listar;
         }
     }
 }

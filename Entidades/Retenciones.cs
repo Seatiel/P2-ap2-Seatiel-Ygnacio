@@ -13,13 +13,13 @@ namespace Entidades
         public string Descripcion { get; set; }
         public double Valor { get; set; }
 
-        //public virtual Empleados Empleado { get; set; }
+        public List<Empleados> Emplado { get; set; }
 
-        public virtual ICollection<EmpleadosRetenciones> Detalle { get; set; } //Muchos
+        //public virtual ICollection<EmpleadosRetenciones> Detalle { get; set; } //Muchos
 
         public Retenciones()
         {
-            this.Detalle = new HashSet<EmpleadosRetenciones>();
+            this.Emplado = new List<Empleados>();
         }       
 
     }

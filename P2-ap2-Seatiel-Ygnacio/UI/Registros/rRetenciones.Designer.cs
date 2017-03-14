@@ -39,10 +39,8 @@
             this.ValortextBox = new System.Windows.Forms.TextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.RetencionesIdtextBox = new System.Windows.Forms.TextBox();
-            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ValorerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValorerrorProvider)).BeginInit();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Buscarbutton
@@ -133,13 +131,9 @@
             this.RetencionesIdtextBox.Size = new System.Drawing.Size(36, 22);
             this.RetencionesIdtextBox.TabIndex = 12;
             // 
-            // DescripcionerrorProvider
+            // ValidarerrorProvider
             // 
-            this.DescripcionerrorProvider.ContainerControl = this;
-            // 
-            // ValorerrorProvider
-            // 
-            this.ValorerrorProvider.ContainerControl = this;
+            this.ValidarerrorProvider.ContainerControl = this;
             // 
             // rRetenciones
             // 
@@ -158,8 +152,7 @@
             this.Controls.Add(this.RetencionesIdtextBox);
             this.Name = "rRetenciones";
             this.Text = "rRetenciones";
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ValorerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +170,6 @@
         private System.Windows.Forms.TextBox ValortextBox;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.TextBox RetencionesIdtextBox;
-        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
-        private System.Windows.Forms.ErrorProvider ValorerrorProvider;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
     }
 }

@@ -9,16 +9,22 @@ namespace BLL
 {
     public class RetencionesBLL
     {
-        public static Entidades.Retenciones Guardar(Entidades.Retenciones nuevo)
+        public static bool Guardar(Entidades.Retenciones retencion)
         {
-            Entidades.Retenciones creado = null;
-            using (var repositorio = new Repositorio<Entidades.Retenciones>())
+            using (var db = new Repositorio<Entidades.Retenciones>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    return db.Guardar(retencion);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
 
-            return creado;
-
+            return false;
         }
 
 
@@ -72,6 +78,24 @@ namespace BLL
                 }
                 return Result;
             }
+        }
+
+        public static List<Entidades.Retenciones> ListarTodo()
+        {
+            List<Entidades.Retenciones> listar = null;
+
+            using (var db = new Repositorio<Entidades.Retenciones>())
+            {
+                try
+                {
+                    listar = db.ListarTodo();
+                }
+                catch
+                {
+
+                }
+            }
+            return listar;
         }
     }
 }

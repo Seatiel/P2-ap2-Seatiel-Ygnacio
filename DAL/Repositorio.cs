@@ -26,23 +26,23 @@ namespace DAL
             }
         }
 
-        public TEntity Guardar(TEntity laEntidad)
-        {
-            TEntity Result = null;
+        //public TEntity Guardar(TEntity laEntidad)
+        //{
+        //    TEntity Result = null;
 
-            try
-            {
-                EntitySet.Add(laEntidad);
-                Contex.SaveChanges();
-                Result = laEntidad;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //    try
+        //    {
+        //        EntitySet.Add(laEntidad);
+        //        Contex.SaveChanges();
+        //        Result = laEntidad;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Result;
-        }
+        //    return Result;
+        //}
 
         public bool Modificar(TEntity laEntidad)
         {
@@ -104,7 +104,7 @@ namespace DAL
             return Result;
         }
 
-        public List<TEntity> ListaTodo()
+        public List<TEntity> ListarTodo()
         {
             using (var Conec = new DAL.Parcial2Ap2Db())
             {
@@ -114,12 +114,28 @@ namespace DAL
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }
-
             return null;
+        }
+
+        public bool Guardar(TEntity laEntidad)
+        {
+            try
+            {
+                EntitySet.Add(laEntidad);
+                Contex.SaveChanges();
+                return true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return false;
         }
 
         public void Dispose()

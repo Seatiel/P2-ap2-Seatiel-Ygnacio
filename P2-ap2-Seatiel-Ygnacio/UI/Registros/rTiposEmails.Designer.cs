@@ -37,8 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.TiposEmailsIdtextBox = new System.Windows.Forms.TextBox();
-            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Buscarbutton
@@ -113,9 +113,9 @@
             this.TiposEmailsIdtextBox.Size = new System.Drawing.Size(36, 22);
             this.TiposEmailsIdtextBox.TabIndex = 24;
             // 
-            // DescripcionerrorProvider
+            // ValidarerrorProvider
             // 
-            this.DescripcionerrorProvider.ContainerControl = this;
+            this.ValidarerrorProvider.ContainerControl = this;
             // 
             // rTiposEmails
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.TiposEmailsIdtextBox);
             this.Name = "rTiposEmails";
             this.Text = "rTiposEmail";
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +148,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.TextBox TiposEmailsIdtextBox;
-        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +10,29 @@ namespace BLL
 {
     public class TiposEmailBLL
     {
-        public static Entidades.TiposEmail Guardar(Entidades.TiposEmail nuevo)
+        public static bool Guardar(TiposEmails nuevo)
         {
-            Entidades.TiposEmail creado = null;
-            using (var repositorio = new Repositorio<Entidades.TiposEmail>())
+            using (var db = new Repositorio<TiposEmails>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    return db.Guardar(nuevo);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
 
-            return creado;
-
+            return false;
         }
 
 
-        public static bool Mofidicar(Entidades.TiposEmail existente)
+        public static bool Mofidicar(Entidades.TiposEmails existente)
         {
             bool eliminado = false;
-            using (var repositorio = new Repositorio<Entidades.TiposEmail>())
+            using (var repositorio = new Repositorio<Entidades.TiposEmails>())
             {
                 eliminado = repositorio.Modificar(existente);
             }
@@ -34,10 +41,10 @@ namespace BLL
 
         }
 
-        public static bool Eliminar(Entidades.TiposEmail existente)
+        public static bool Eliminar(Entidades.TiposEmails existente)
         {
             bool eliminado = false;
-            using (var repositorio = new Repositorio<Entidades.TiposEmail>())
+            using (var repositorio = new Repositorio<Entidades.TiposEmails>())
             {
                 eliminado = repositorio.Eliminar(existente);
             }
@@ -46,10 +53,10 @@ namespace BLL
 
         }
 
-        public static Entidades.TiposEmail Buscar(Expression<Func<Entidades.TiposEmail, bool>> tipo)
+        public static Entidades.TiposEmails Buscar(Expression<Func<Entidades.TiposEmails, bool>> tipo)
         {
-            Entidades.TiposEmail Result = null;
-            using (var repoitorio = new Repositorio<Entidades.TiposEmail>())
+            Entidades.TiposEmails Result = null;
+            using (var repoitorio = new Repositorio<Entidades.TiposEmails>())
             {
                 Result = repoitorio.Buscar(tipo);
             }
@@ -57,10 +64,10 @@ namespace BLL
             return Result;
         }
 
-        public static List<Entidades.TiposEmail> Lista(Expression<Func<Entidades.TiposEmail, bool>> busqueda)
+        public static List<Entidades.TiposEmails> Lista(Expression<Func<Entidades.TiposEmails, bool>> busqueda)
         {
-            List<Entidades.TiposEmail> Result = null;
-            using (var db = new Repositorio<Entidades.TiposEmail>())
+            List<Entidades.TiposEmails> Result = null;
+            using (var db = new Repositorio<Entidades.TiposEmails>())
             {
                 try
                 {
@@ -72,6 +79,24 @@ namespace BLL
                 }
                 return Result;
             }
+        }
+
+        public static List<Entidades.TiposEmails> ListarTodo()
+        {
+            List<Entidades.TiposEmails> listar = null;
+
+            using (var db = new Repositorio<Entidades.TiposEmails>())
+            {
+                try
+                {
+                    listar = db.ListarTodo();
+                }
+                catch
+                {
+
+                }
+            }
+            return listar;
         }
     }
 }

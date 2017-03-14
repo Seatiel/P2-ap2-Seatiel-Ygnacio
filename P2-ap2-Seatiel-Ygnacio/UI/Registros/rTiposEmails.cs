@@ -17,9 +17,9 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
             InitializeComponent();
         }
 
-        private TiposEmail LlenarClase()
+        private TiposEmails LlenarClase()
         {
-            var tipoEmail = new TiposEmail();
+            var tipoEmail = new TiposEmails();
             tipoEmail.Descripcion = DescripciontextBox.Text;
             return tipoEmail;
         }
@@ -35,7 +35,7 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
             bool retorno = true;
             if (string.IsNullOrEmpty(DescripciontextBox.Text))
             {
-                DescripcionerrorProvider.SetError(DescripciontextBox, "Debe de ingresar la Descripcion.");                
+                ValidarerrorProvider.SetError(DescripciontextBox, "Debe de ingresar la Descripcion.");                
                 retorno = false;
             }
             return retorno;
@@ -48,7 +48,7 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            TiposEmail tipoEmail = null;
+            TiposEmails tipoEmail = null;
             tipoEmail = LlenarClase();
             if (!Validar())
             {
@@ -65,7 +65,7 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int id = Utilidades.ToInt(TiposEmailsIdtextBox.Text);
-            TiposEmail tipoEmail = BLL.TiposEmailBLL.Buscar(te => te.TipoId == id);
+            TiposEmails tipoEmail = BLL.TiposEmailBLL.Buscar(te => te.TipoId == id);
             if (!string.IsNullOrEmpty(TiposEmailsIdtextBox.Text))
             {
                 if (BLL.TiposEmailBLL.Eliminar(tipoEmail))
@@ -83,7 +83,7 @@ namespace P2_ap2_Seatiel_Ygnacio.UI.Registros
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Utilidades.ToInt(TiposEmailsIdtextBox.Text);
-            TiposEmail tipoEmail = BLL.TiposEmailBLL.Buscar(te => te.TipoId == id);
+            TiposEmails tipoEmail = BLL.TiposEmailBLL.Buscar(te => te.TipoId == id);
             if (!string.IsNullOrEmpty(TiposEmailsIdtextBox.Text))
             {
                 if (tipoEmail != null)

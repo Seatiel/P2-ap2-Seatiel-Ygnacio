@@ -12,10 +12,6 @@ namespace Entidades
         public int EmpleadoRetencionId { get; set; }
         public int EmpleadoId { get; set; }
         public int RetencionId { get; set; }
-
-        
-
-
-        
+               
     }
 }

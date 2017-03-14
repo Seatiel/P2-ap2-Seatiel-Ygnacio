@@ -30,10 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposEmailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retencionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,32 +60,41 @@
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
             // registrosEmpleadosToolStripMenuItem
             // 
             this.registrosEmpleadosToolStripMenuItem.Name = "registrosEmpleadosToolStripMenuItem";
-            this.registrosEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.registrosEmpleadosToolStripMenuItem.Text = "Empleados";
+            this.registrosEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
+            this.registrosEmpleadosToolStripMenuItem.Text = "Registros Empleados";
             this.registrosEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.registrosEmpleadosToolStripMenuItem_Click);
             // 
             // tiposEmailsToolStripMenuItem
             // 
             this.tiposEmailsToolStripMenuItem.Name = "tiposEmailsToolStripMenuItem";
-            this.tiposEmailsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.tiposEmailsToolStripMenuItem.Text = "Tipos Emails";
+            this.tiposEmailsToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.tiposEmailsToolStripMenuItem.Text = "Registros Tipos Emails";
             this.tiposEmailsToolStripMenuItem.Click += new System.EventHandler(this.tiposEmailsToolStripMenuItem_Click);
             // 
             // retencionesToolStripMenuItem
             // 
             this.retencionesToolStripMenuItem.Name = "retencionesToolStripMenuItem";
-            this.retencionesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.retencionesToolStripMenuItem.Text = "Retenciones";
+            this.retencionesToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.retencionesToolStripMenuItem.Text = "Registros Retenciones";
             this.retencionesToolStripMenuItem.Click += new System.EventHandler(this.retencionesToolStripMenuItem_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.empleadosToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.empleadosToolStripMenuItem.Text = "Consultas Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
@@ -110,6 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposEmailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem retencionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }
 

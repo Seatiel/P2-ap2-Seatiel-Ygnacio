@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,40 @@ namespace BLL
 {
     public class EmpleadosRetencionesBLL
     {
-        public static Entidades.EmpleadosRetenciones Guardar(Entidades.EmpleadosRetenciones nuevo)
+        public static bool Guardar(Entidades.EmpleadosRetenciones detalle)
         {
-            Entidades.EmpleadosRetenciones creado = null;
-            using (var repositorio = new Repositorio<Entidades.EmpleadosRetenciones>())
+            using (var db = new Repositorio<Entidades.EmpleadosRetenciones>())
             {
-                creado = repositorio.Guardar(nuevo);
+                try
+                {
+                    return db.Guardar(detalle);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
 
-            return creado;
+            return false;
+        }
 
+        public static bool Guardar(List<EmpleadosRetenciones> lista)
+        {            
+            try
+            {
+                foreach (var detalle in lista)
+                {
+                    Guardar(detalle);
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return false;
         }
 
 
@@ -44,34 +69,8 @@ namespace BLL
 
             return eliminado;
 
-        }
+        }     
 
-        public static Entidades.EmpleadosRetenciones Buscar(Expression<Func<Entidades.EmpleadosRetenciones, bool>> tipo)
-        {
-            Entidades.EmpleadosRetenciones Result = null;
-            using (var repoitorio = new Repositorio<Entidades.EmpleadosRetenciones>())
-            {
-                Result = repoitorio.Buscar(tipo);
-            }
-
-            return Result;
-        }
-
-        public static List<Entidades.EmpleadosRetenciones> Lista(Expression<Func<Entidades.EmpleadosRetenciones, bool>> busqueda)
-        {
-            List<Entidades.EmpleadosRetenciones> Result = null;
-            using (var db = new Repositorio<Entidades.EmpleadosRetenciones>())
-            {
-                try
-                {
-                    Result = db.Lista(busqueda).ToList(); //EntitySet.Where(busqueda).ToList();
-                }
-                catch
-                {
-
-                }
-                return Result;
-            }
-        }
+        
     }
 }

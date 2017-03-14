@@ -14,12 +14,10 @@ namespace DAL
         }
 
         public DbSet<Entidades.Retenciones> Retencion { get; set; }
-        public DbSet<Entidades.TiposEmail> TipoEmail { get; set; }
+        public DbSet<Entidades.TiposEmails> TipoEmail { get; set; }
         public DbSet<Entidades.Empleados> Empleado { get; set; }
         public DbSet<Entidades.EmpleadosRetenciones> EmpleadoDescuento { get; set; }
         public DbSet<Entidades.EmpleadosEmails> EmpleadoEmail { get; set; }
-
-
 
     }
 }

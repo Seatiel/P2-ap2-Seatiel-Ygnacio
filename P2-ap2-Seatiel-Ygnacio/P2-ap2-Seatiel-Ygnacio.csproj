@@ -76,17 +76,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cEmpleados.Designer.cs">
+      <DependentUpon>cEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\rEmpleados.Designer.cs">
       <DependentUpon>rEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\rEmpleadosEmails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\rEmpleadosEmails.Designer.cs">
-      <DependentUpon>rEmpleadosEmails.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rRetenciones.cs">
       <SubType>Form</SubType>
@@ -113,11 +113,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cEmpleados.resx">
+      <DependentUpon>cEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rEmpleados.resx">
       <DependentUpon>rEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rEmpleadosEmails.resx">
-      <DependentUpon>rEmpleadosEmails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rRetenciones.resx">
       <DependentUpon>rRetenciones.cs</DependentUpon>
@@ -137,9 +137,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Consultas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{666bf208-ee08-4b2c-8e28-bfc7241530a3}</Project>

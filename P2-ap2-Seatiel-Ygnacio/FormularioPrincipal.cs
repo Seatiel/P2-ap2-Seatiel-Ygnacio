@@ -33,5 +33,11 @@ namespace P2_ap2_Seatiel_Ygnacio
             UI.Registros.rTiposEmails rt = new UI.Registros.rTiposEmails();
             rt.Show();
         }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cEmpleados ce = new UI.Consultas.cEmpleados();
+            ce.Show();
+        }
     }
 }

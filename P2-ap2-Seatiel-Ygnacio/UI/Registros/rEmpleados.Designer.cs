@@ -41,10 +41,24 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.NombreerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.SueldoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SueldoerrorProvider)).BeginInit();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EmpleadosRetencionesgroupBox = new System.Windows.Forms.GroupBox();
+            this.RetencionescomboBox = new System.Windows.Forms.ComboBox();
+            this.EmpleadosRetencionesdataGridView = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AgregarRetencionbutton = new System.Windows.Forms.Button();
+            this.EmpleadosEmailsgroupBox = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.TiposcomboBox = new System.Windows.Forms.ComboBox();
+            this.EmpleadosEmailsdataGridView = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AgregarEmailbutton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
+            this.EmpleadosRetencionesgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosRetencionesdataGridView)).BeginInit();
+            this.EmpleadosEmailsgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosEmailsdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // EmpleadoIdtextBox
@@ -114,7 +128,7 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(22, 222);
+            this.Nuevobutton.Location = new System.Drawing.Point(162, 653);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(94, 39);
             this.Nuevobutton.TabIndex = 8;
@@ -124,7 +138,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(177, 222);
+            this.Guardarbutton.Location = new System.Drawing.Point(317, 653);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(94, 39);
             this.Guardarbutton.TabIndex = 9;
@@ -134,7 +148,7 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(337, 222);
+            this.Eliminarbutton.Location = new System.Drawing.Point(477, 653);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(94, 39);
             this.Eliminarbutton.TabIndex = 10;
@@ -152,19 +166,133 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // NombreerrorProvider
+            // ValidarerrorProvider
             // 
-            this.NombreerrorProvider.ContainerControl = this;
+            this.ValidarerrorProvider.ContainerControl = this;
             // 
-            // SueldoerrorProvider
+            // EmpleadosRetencionesgroupBox
             // 
-            this.SueldoerrorProvider.ContainerControl = this;
+            this.EmpleadosRetencionesgroupBox.Controls.Add(this.RetencionescomboBox);
+            this.EmpleadosRetencionesgroupBox.Controls.Add(this.EmpleadosRetencionesdataGridView);
+            this.EmpleadosRetencionesgroupBox.Controls.Add(this.label7);
+            this.EmpleadosRetencionesgroupBox.Controls.Add(this.AgregarRetencionbutton);
+            this.EmpleadosRetencionesgroupBox.Location = new System.Drawing.Point(12, 175);
+            this.EmpleadosRetencionesgroupBox.Name = "EmpleadosRetencionesgroupBox";
+            this.EmpleadosRetencionesgroupBox.Size = new System.Drawing.Size(731, 194);
+            this.EmpleadosRetencionesgroupBox.TabIndex = 12;
+            this.EmpleadosRetencionesgroupBox.TabStop = false;
+            this.EmpleadosRetencionesgroupBox.Text = "Empleados Retenciones";
+            // 
+            // RetencionescomboBox
+            // 
+            this.RetencionescomboBox.FormattingEnabled = true;
+            this.RetencionescomboBox.Location = new System.Drawing.Point(6, 54);
+            this.RetencionescomboBox.Name = "RetencionescomboBox";
+            this.RetencionescomboBox.Size = new System.Drawing.Size(228, 24);
+            this.RetencionescomboBox.TabIndex = 58;
+            // 
+            // EmpleadosRetencionesdataGridView
+            // 
+            this.EmpleadosRetencionesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpleadosRetencionesdataGridView.Location = new System.Drawing.Point(6, 82);
+            this.EmpleadosRetencionesdataGridView.Name = "EmpleadosRetencionesdataGridView";
+            this.EmpleadosRetencionesdataGridView.RowTemplate.Height = 24;
+            this.EmpleadosRetencionesdataGridView.Size = new System.Drawing.Size(719, 106);
+            this.EmpleadosRetencionesdataGridView.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 17);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Retenciones:";
+            // 
+            // AgregarRetencionbutton
+            // 
+            this.AgregarRetencionbutton.Location = new System.Drawing.Point(614, 42);
+            this.AgregarRetencionbutton.Name = "AgregarRetencionbutton";
+            this.AgregarRetencionbutton.Size = new System.Drawing.Size(100, 34);
+            this.AgregarRetencionbutton.TabIndex = 56;
+            this.AgregarRetencionbutton.Text = "Agregar";
+            this.AgregarRetencionbutton.UseVisualStyleBackColor = true;
+            this.AgregarRetencionbutton.Click += new System.EventHandler(this.AgregarRetencionbutton_Click);
+            // 
+            // EmpleadosEmailsgroupBox
+            // 
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.label5);
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.EmailtextBox);
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.TiposcomboBox);
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.EmpleadosEmailsdataGridView);
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.label6);
+            this.EmpleadosEmailsgroupBox.Controls.Add(this.AgregarEmailbutton);
+            this.EmpleadosEmailsgroupBox.Location = new System.Drawing.Point(12, 384);
+            this.EmpleadosEmailsgroupBox.Name = "EmpleadosEmailsgroupBox";
+            this.EmpleadosEmailsgroupBox.Size = new System.Drawing.Size(731, 244);
+            this.EmpleadosEmailsgroupBox.TabIndex = 13;
+            this.EmpleadosEmailsgroupBox.TabStop = false;
+            this.EmpleadosEmailsgroupBox.Text = "Empleados Email\'s";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(290, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Email:";
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Location = new System.Drawing.Point(293, 67);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(269, 22);
+            this.EmailtextBox.TabIndex = 52;
+            // 
+            // TiposcomboBox
+            // 
+            this.TiposcomboBox.FormattingEnabled = true;
+            this.TiposcomboBox.Location = new System.Drawing.Point(9, 65);
+            this.TiposcomboBox.Name = "TiposcomboBox";
+            this.TiposcomboBox.Size = new System.Drawing.Size(228, 24);
+            this.TiposcomboBox.TabIndex = 55;
+            // 
+            // EmpleadosEmailsdataGridView
+            // 
+            this.EmpleadosEmailsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpleadosEmailsdataGridView.Location = new System.Drawing.Point(6, 100);
+            this.EmpleadosEmailsdataGridView.Name = "EmpleadosEmailsdataGridView";
+            this.EmpleadosEmailsdataGridView.RowTemplate.Height = 24;
+            this.EmpleadosEmailsdataGridView.Size = new System.Drawing.Size(719, 127);
+            this.EmpleadosEmailsdataGridView.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 17);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Tipos Emails:";
+            // 
+            // AgregarEmailbutton
+            // 
+            this.AgregarEmailbutton.Location = new System.Drawing.Point(614, 55);
+            this.AgregarEmailbutton.Name = "AgregarEmailbutton";
+            this.AgregarEmailbutton.Size = new System.Drawing.Size(100, 34);
+            this.AgregarEmailbutton.TabIndex = 51;
+            this.AgregarEmailbutton.Text = "Agregar";
+            this.AgregarEmailbutton.UseVisualStyleBackColor = true;
+            this.AgregarEmailbutton.Click += new System.EventHandler(this.AgregarEmailbutton_Click);
             // 
             // rEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 273);
+            this.ClientSize = new System.Drawing.Size(769, 704);
+            this.Controls.Add(this.EmpleadosEmailsgroupBox);
+            this.Controls.Add(this.EmpleadosRetencionesgroupBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -179,8 +307,14 @@
             this.Controls.Add(this.EmpleadoIdtextBox);
             this.Name = "rEmpleados";
             this.Text = "rEmpleados";
-            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SueldoerrorProvider)).EndInit();
+            this.Load += new System.EventHandler(this.rEmpleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
+            this.EmpleadosRetencionesgroupBox.ResumeLayout(false);
+            this.EmpleadosRetencionesgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosRetencionesdataGridView)).EndInit();
+            this.EmpleadosEmailsgroupBox.ResumeLayout(false);
+            this.EmpleadosEmailsgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosEmailsdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +334,18 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
-        private System.Windows.Forms.ErrorProvider NombreerrorProvider;
-        private System.Windows.Forms.ErrorProvider SueldoerrorProvider;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
+        private System.Windows.Forms.GroupBox EmpleadosEmailsgroupBox;
+        private System.Windows.Forms.GroupBox EmpleadosRetencionesgroupBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.ComboBox TiposcomboBox;
+        private System.Windows.Forms.DataGridView EmpleadosEmailsdataGridView;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button AgregarEmailbutton;
+        private System.Windows.Forms.ComboBox RetencionescomboBox;
+        private System.Windows.Forms.DataGridView EmpleadosRetencionesdataGridView;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button AgregarRetencionbutton;
     }
 }

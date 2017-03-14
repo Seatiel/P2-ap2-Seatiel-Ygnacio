@@ -14,13 +14,13 @@ namespace Entidades
         public int TipoId { get; set; }
         public string Email { get; set; }
 
-        public virtual Empleados Empleado { get; set; }
+        public virtual TiposEmails TipoEmail { get; set; } //Uno
 
-        public virtual TiposEmail TipoEmail { get; set; } //Uno
+        public virtual Empleados Empleado { get; set; }
 
         public EmpleadosEmails()
         {
-            TipoEmail = new TiposEmail();
+            this.TipoEmail = new TiposEmails();
         }
 
         public EmpleadosEmails(int tipoId, string email)
@@ -28,8 +28,6 @@ namespace Entidades
             this.TipoId = tipoId;
             this.Email = email;
         }
-
-
 
     }
 }
